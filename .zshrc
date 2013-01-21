@@ -1,7 +1,7 @@
 autoload -U compinit
 compinit -d /tmp/$USER.zcompdump
 
-HISTFILE=$ZDOTDIR/.zsh_history
+HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt hist_ignore_dups     # ignore duplication command history list
@@ -14,7 +14,7 @@ setopt nolistbeep
 PROMPT="%n@%m%% "
 RPROMPT="[%~]"
 
-source ~/.zshrc.`uname`
+source $ZDOTDIR/.zsh.`uname`
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

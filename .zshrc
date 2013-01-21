@@ -14,6 +14,8 @@ setopt nolistbeep
 PROMPT="%n@%m%% "
 RPROMPT="[%~]"
 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
+
 source $ZDOTDIR/.zshrc.`uname`
 [ -f $ZDOTDIR/.zshrc.local ] && source $ZDOTDIR/.zshrc.local
 

@@ -1,4 +1,5 @@
-autoload -U compinit -d /tmp/$USER.zcompdump
+autoload -Uz compinit
+compinit -d /tmp/$USER.zcompdump
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
@@ -13,17 +14,21 @@ setopt nolistbeep
 PROMPT="%n@%m%% "
 RPROMPT="[%~]"
 
-source $ZDOTDIR/.zsh.`uname`
+source $ZDOTDIR/.zshrc.`uname`
+[ -f $ZDOTDIR/.zshrc.local ] && source $ZDOTDIR/.zshrc.local
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-eval "$(rbenv init -)"
-source ~/perl5/perlbrew/etc/bashrc
-
 # 今いるディレクトリを補完候補から外す
 zstyle ':completion:*' ignore-parents parent pwd ..
+
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
 
 setopt auto_pushd
 setopt pushd_ignore_dups

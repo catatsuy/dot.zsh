@@ -1,5 +1,4 @@
-autoload -U compinit
-compinit -d /tmp/$USER.zcompdump
+autoload -U compinit -d /tmp/$USER.zcompdump
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000

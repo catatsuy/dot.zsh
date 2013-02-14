@@ -39,3 +39,17 @@ setopt list_packed
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+function textopdf(){
+    file=$1
+    if platex $file
+    then
+        echo "\n--platex exit--\n"
+        if dvipdfmx ${file%tex}dvi
+        then
+	        echo "\n--dvipdfmx exit--\n"
+        else
+	        echo "Look ${file%tex}log"
+        fi
+    fi
+}

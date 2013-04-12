@@ -1,2 +1,4 @@
-# eval "$(rbenv init -)"
 # source ~/perl5/perlbrew/etc/bashrc
+# eval "$(rbenv init -)"
+# export PATH=$PATH:/usr/local/texlive/2011/bin/i386-linux:/usr/local/apache/bin:/usr/local/php/bin
+# export PATH=$PATH:$HOME/.rbenv/bin:$HOME/.cabal/bin

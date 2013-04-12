@@ -3,5 +3,3 @@ alias ls='ls --color=auto'
 alias open='gnome-open'
 alias emacs='XMODIFIERS=@im=none emacs'
 alias acroread='env UBUNTU_MENUPROXY= acroread'
-export PATH=$PATH:$HOME/local/bin:/usr/local/texlive/2011/bin/i386-linux:/usr/local/apache/bin:/usr/local/php/bin:/usr/local/ruby/bin:/usr/local/mongodb:$HOME/.rbenv/bin
-

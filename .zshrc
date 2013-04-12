@@ -42,6 +42,28 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# 補完関数の表示を強化する
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
+zstyle ':completion:*:messages' format '%F{YELLOW}%d'$DEFAULT
+zstyle ':completion:*:warnings' format '%F{RED}No matches for:''%F{YELLOW} %d'$DEFAULT
+zstyle ':completion:*:descriptions' format '%F{YELLOW}completing %B%d%b'$DEFAULT
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:descriptions' format '%F{yellow}Completing %B%d%b%f'$DEFAULT
+
+# マッチ種別を別々に表示
+zstyle ':completion:*' group-name ''
+
+# セパレータを設定する
+zstyle ':completion:*' list-separator '-->'
+zstyle ':completion:*:manuals' separate-sections true
+
+# manの補完をセクション番号別に表示させる
+zstyle ':completion:*:manuals' separate-sections true
+
+# オブジェクトファイルとか中間ファイルとかはfileとして補完させない
+zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#'
+
 function textopdf(){
     file=$1
     if platex $file

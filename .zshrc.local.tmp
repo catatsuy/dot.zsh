@@ -1,4 +1,15 @@
+# LaTeX
+# export PATH=$PATH:/usr/local/texlive/2011/bin/i386-linux
+
+# PHP
+# export PATH=$PATH:/usr/local/apache/bin:/usr/local/php/bin
+
+# perlbrew
 # source ~/perl5/perlbrew/etc/bashrc
-# export PATH=$PATH:/usr/local/texlive/2011/bin/i386-linux:/usr/local/apache/bin:/usr/local/php/bin
-# export PATH=$PATH:$HOME/.rbenv/bin:$HOME/.cabal/bin
+
+# rbenv
+# export PATH=$PATH:$HOME/.rbenv/bin
 # eval "$(rbenv init -)"
+
+# haskell
+# export PATH=$PATH:$HOME/.cabal/bin

@@ -1,3 +1,6 @@
+## 補完関数を増やす
+fpath=(~/.zsh/functions/completions/src(N-/) ${fpath})
+
 autoload -Uz compinit
 compinit -d /tmp/$USER.zcompdump
 

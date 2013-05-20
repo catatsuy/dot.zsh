@@ -15,6 +15,9 @@ setopt nolistbeep
 PROMPT="%n@%m%% "
 RPROMPT="[%~]"
 
+## 重複パスを登録しない
+typeset -U path cdpath fpath manpath
+
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
 # 環境ごとの設定を読み込み

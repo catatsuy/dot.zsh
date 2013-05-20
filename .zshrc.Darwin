@@ -2,4 +2,4 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 alias ls='ls -G'
 
 ## pathを設定
-path=(/usr/local/bin(N-/) /usr/bin(N-/) /bin(N-/) /usr/sbin(N-/) /sbin(N-/) /opt/X11/bin)
+path=(/usr/local/bin(N-/) /usr/bin(N-/) /bin(N-/) /usr/sbin(N-/) /sbin(N-/) /opt/X11/bin(N-/))

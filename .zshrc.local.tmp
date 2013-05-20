@@ -1,5 +1,6 @@
 # LaTeX
 # export PATH=$PATH:/usr/local/texlive/2011/bin/i386-linux
+# export PATH=$PATH:/usr/local/texlive/2012/bin/x86_64-darwin
 
 # PHP
 # export PATH=$PATH:/usr/local/apache/bin:/usr/local/php/bin

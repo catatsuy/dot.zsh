@@ -29,6 +29,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
 [ -f $ZDOTDIR/.zshrc.local ]   && source $ZDOTDIR/.zshrc.local
 
+[ -f $ZDOTDIR/.zshrc.path  ]   && source $ZDOTDIR/.zshrc.path
+
 # alias
 
 alias grep='grep --color=auto'

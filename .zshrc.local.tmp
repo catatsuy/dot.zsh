@@ -5,12 +5,5 @@
 # PHP
 # export PATH=$PATH:/usr/local/apache/bin:/usr/local/php/bin
 
-# perlbrew
-# source ~/perl5/perlbrew/etc/bashrc
-
-# rbenv
-# export PATH=$PATH:$HOME/.rbenv/bin
-# eval "$(rbenv init -)"
-
 # haskell
 # export PATH=$PATH:$HOME/.cabal/bin

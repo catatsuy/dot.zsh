@@ -1,9 +1,9 @@
 # LaTeX
-# export PATH=$PATH:/usr/local/texlive/2011/bin/i386-linux
-# export PATH=$PATH:/usr/local/texlive/2012/bin/x86_64-darwin
+# export PATH=/usr/local/texlive/2011/bin/i386-linux:$PATH
+# export PATH=/usr/local/texlive/2012/bin/x86_64-darwin:$PATH
 
 # PHP
-# export PATH=$PATH:/usr/local/apache/bin:/usr/local/php/bin
+# export PATH=/usr/local/apache/bin:/usr/local/php/bin:$PATH
 
 # haskell
-# export PATH=$PATH:$HOME/.cabal/bin
+# export PATH=$HOME/.cabal/bin:$PATH

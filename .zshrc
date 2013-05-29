@@ -33,15 +33,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
 # alias
 
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-alias time='/usr/bin/time -p'
+[ -f $ZDOTDIR/.zshrc.alias  ]  && source $ZDOTDIR/.zshrc.alias
 
 # 今いるディレクトリを補完候補から外す（cd ../）
 zstyle ':completion:*' ignore-parents parent pwd ..

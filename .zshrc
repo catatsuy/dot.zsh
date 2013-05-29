@@ -35,6 +35,10 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
 [ -f $ZDOTDIR/.zshrc.alias  ]  && source $ZDOTDIR/.zshrc.alias
 
+# myfunc
+
+[ -f $ZDOTDIR/.zshrc.myfunc ]  && source $ZDOTDIR/.zshrc.myfunc
+
 # 今いるディレクトリを補完候補から外す（cd ../）
 zstyle ':completion:*' ignore-parents parent pwd ..
 
@@ -71,18 +75,3 @@ zstyle ':completion:*:manuals' separate-sections true
 
 # オブジェクトファイルとか中間ファイルとかはfileとして補完させない
 zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#'
-
-# TeX -> PDF 一発変換
-function textopdf(){
-    file=$1
-    if platex $file
-    then
-        echo "\n--platex exit--\n"
-        if dvipdfmx ${file%tex}dvi
-        then
-	        echo "\n--dvipdfmx exit--\n"
-        else
-	        echo "Look ${file%tex}log"
-        fi
-    fi
-}

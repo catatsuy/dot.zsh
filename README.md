@@ -6,3 +6,9 @@
     git submodule update
 
 `.zsh.local` は自由にいじれる
+
+`~/.zshenv` に
+
+    export ZDOTDIR=$HOME/.zsh
+
+が必要

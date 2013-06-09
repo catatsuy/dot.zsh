@@ -8,12 +8,29 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-setopt hist_ignore_dups     # ignore duplication command history list
-setopt share_history        # share command history data
+# ignore duplication command history list
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
 
-bindkey -e
+# share command history data
+setopt share_history
+
+# auto directory pushd that you can get dirs list by cd -[tab]
+setopt auto_pushd
+setopt pushd_ignore_dups
+
+# command correct edition before each completion attempt
+setopt correct
+setopt correct_all
+
+setopt complete_aliases
+
+setopt list_packed
 
 setopt nolistbeep
+
+bindkey -e
 
 PROMPT="%n@%m%% "
 RPROMPT="[%~]"
@@ -49,10 +66,6 @@ zle -N history-beginning-search-forward-end history-search-end
 # C-p C-n で検索に
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
-
-setopt auto_pushd
-setopt pushd_ignore_dups
-setopt list_packed
 
 # 補完関数の表示を強化する
 zstyle ':completion:*' verbose yes

@@ -5,7 +5,10 @@ alias ls='ls -G'
 alias javac="javac -J-Dfile.encoding=UTF-8"
 alias java="java -Dfile.encoding=UTF-8"
 
-alias tmux-copy='tmux save-buffer - | reattach-to-user-namespace pbcopy'
+## tmux 内で
+if [ -n "$TMUX" ]; then
+  alias pbcopy="reattach-to-user-namespace pbcopy"
+fi
 
 ## pathを設定
 path=(/usr/local/bin(N-/) /usr/bin(N-/) /bin(N-/) /usr/sbin(N-/) /sbin(N-/) /opt/X11/bin(N-/))

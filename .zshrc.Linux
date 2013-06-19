@@ -1,11 +1,12 @@
 alias ls='ls --color=auto'
 
-alias open='gnome-open'
+
 alias emacs='XMODIFIERS=@im=none emacs'
 alias acroread='env UBUNTU_MENUPROXY= acroread'
+
+## Mac 互換
+alias open='gnome-open'
 
 # clipboard
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
-
-alias tmux-copy='tmux save-buffer - | pbcopy'

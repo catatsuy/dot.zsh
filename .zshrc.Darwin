@@ -1,6 +1,3 @@
-export LSCOLORS=gxfxcxdxbxegedabagacad
-alias ls='ls -G'
-
 ## java 文字コード
 alias javac="javac -J-Dfile.encoding=UTF-8"
 alias java="java -Dfile.encoding=UTF-8"
@@ -12,3 +9,13 @@ fi
 
 ## pathを設定
 path=(/usr/local/bin(N-/) /usr/bin(N-/) /bin(N-/) /usr/sbin(N-/) /sbin(N-/) /opt/X11/bin(N-/))
+
+## coreutils
+if [ -d /usr/local/opt/coreutils/libexec/gnubin ] ; then
+    export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+    export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+    alias ls='ls --color=auto'
+else
+    export LSCOLORS=gxfxcxdxbxegedabagacad
+    alias ls='ls -G'
+fi

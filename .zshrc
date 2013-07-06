@@ -20,10 +20,6 @@ setopt share_history
 setopt auto_pushd
 setopt pushd_ignore_dups
 
-# command correct edition before each completion attempt
-setopt correct
-setopt correct_all
-
 setopt complete_aliases
 
 setopt list_packed

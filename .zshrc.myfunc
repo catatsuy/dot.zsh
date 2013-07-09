@@ -12,3 +12,8 @@ function textopdf(){
     fi
   fi
 }
+# カレントディレクトリをお手軽サーバに
+function server(){
+  port=$1
+  python -m SimpleHTTPServer $1
+}

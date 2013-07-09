@@ -12,10 +12,10 @@ path=(/usr/local/bin(N-/) /usr/bin(N-/) /bin(N-/) /usr/sbin(N-/) /sbin(N-/) /opt
 
 ## coreutils
 if [ -d /usr/local/opt/coreutils/libexec/gnubin ] ; then
-    export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-    export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-    alias ls='ls --color=auto'
+  export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+  export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+  alias ls='ls --color=auto'
 else
-    export LSCOLORS=gxfxcxdxbxegedabagacad
-    alias ls='ls -G'
+  export LSCOLORS=gxfxcxdxbxegedabagacad
+  alias ls='ls -G'
 fi

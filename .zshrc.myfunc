@@ -6,9 +6,9 @@ function textopdf(){
     echo "\n--platex exit--\n"
     if dvipdfmx ${file%tex}dvi
     then
-	  echo "\n--dvipdfmx exit--\n"
+      echo "\n--dvipdfmx exit--\n"
     else
-	  echo "Look ${file%tex}log"
+      echo "Look ${file%tex}log"
     fi
   fi
 }

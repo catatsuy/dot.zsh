@@ -53,8 +53,10 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 [ -f $ZDOTDIR/.zshrc.myfunc ]  && source $ZDOTDIR/.zshrc.myfunc
 
 # set path of emacs
+if [ -d ${HOME}/.emacs.d/inits ] ; then
+  [ -f $ZDOTDIR/.zshrc.emacs ]  && source $ZDOTDIR/.zshrc.emacs
+fi
 
-[ -f $ZDOTDIR/.zshrc.emacs ]  && source $ZDOTDIR/.zshrc.emacs
 
 # 今いるディレクトリを補完候補から外す（cd ../）
 zstyle ':completion:*' ignore-parents parent pwd ..

@@ -13,7 +13,7 @@ alias zmv='noglob zmv -W'
 
 alias tmux-copy='tmux save-buffer - | pbcopy'
 
-if [ -x /usr/bin/colordiff -o -x /usr/local/bin/colordiff ]; then
+if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
   export LESS='-R'
 else

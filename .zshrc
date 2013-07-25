@@ -26,6 +26,8 @@ setopt list_packed
 
 setopt nolistbeep
 
+setopt transient_rprompt
+
 bindkey -e
 
 PROMPT="%n@%m%% "

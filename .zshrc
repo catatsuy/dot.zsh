@@ -29,7 +29,7 @@ typeset -U path cdpath fpath manpath
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
-# 環境ごとの設定を読み込み
+# load .zshrc.*
 [ -f $ZDOTDIR/.zshrc.`uname` ] && source $ZDOTDIR/.zshrc.`uname`
 [ -f $ZDOTDIR/.zshrc.local ]   && source $ZDOTDIR/.zshrc.local
 [ -f $ZDOTDIR/.zshrc.path  ]   && source $ZDOTDIR/.zshrc.path

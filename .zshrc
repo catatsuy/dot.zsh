@@ -8,24 +8,15 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-# ignore duplication command history list
 setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
-
-# share command history data
 setopt share_history
-
-# auto directory pushd that you can get dirs list by cd -[tab]
 setopt auto_pushd
 setopt pushd_ignore_dups
-
 setopt complete_aliases
-
 setopt list_packed
-
 setopt nolistbeep
-
 setopt transient_rprompt
 
 bindkey -e
@@ -39,19 +30,10 @@ typeset -U path cdpath fpath manpath
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
 # 環境ごとの設定を読み込み
-
 [ -f $ZDOTDIR/.zshrc.`uname` ] && source $ZDOTDIR/.zshrc.`uname`
-
 [ -f $ZDOTDIR/.zshrc.local ]   && source $ZDOTDIR/.zshrc.local
-
 [ -f $ZDOTDIR/.zshrc.path  ]   && source $ZDOTDIR/.zshrc.path
-
-# alias
-
 [ -f $ZDOTDIR/.zshrc.alias  ]  && source $ZDOTDIR/.zshrc.alias
-
-# myfunc
-
 [ -f $ZDOTDIR/.zshrc.myfunc ]  && source $ZDOTDIR/.zshrc.myfunc
 
 # 今いるディレクトリを補完候補から外す（cd ../）

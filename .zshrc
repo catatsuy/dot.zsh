@@ -29,12 +29,12 @@ typeset -U path cdpath fpath manpath
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
-# load .zshrc.*
-[ -f $ZDOTDIR/.zshrc.`uname` ] && source $ZDOTDIR/.zshrc.`uname`
-[ -f $ZDOTDIR/.zshrc.local ]   && source $ZDOTDIR/.zshrc.local
-[ -f $ZDOTDIR/.zshrc.path  ]   && source $ZDOTDIR/.zshrc.path
-[ -f $ZDOTDIR/.zshrc.alias  ]  && source $ZDOTDIR/.zshrc.alias
-[ -f $ZDOTDIR/.zshrc.myfunc ]  && source $ZDOTDIR/.zshrc.myfunc
+# load .zshrc_*
+[ -f $ZDOTDIR/.zshrc_`uname` ]  && source $ZDOTDIR/.zshrc_`uname`
+[ -f $ZDOTDIR/.zshrc_local   ]  && source $ZDOTDIR/.zshrc_local
+[ -f $ZDOTDIR/.zshrc_path    ]  && source $ZDOTDIR/.zshrc_path
+[ -f $ZDOTDIR/.zshrc_alias   ]  && source $ZDOTDIR/.zshrc_alias
+[ -f $ZDOTDIR/.zshrc_myfunc  ]  && source $ZDOTDIR/.zshrc_myfunc
 
 # 今いるディレクトリを補完候補から外す（cd ../）
 zstyle ':completion:*' ignore-parents parent pwd ..

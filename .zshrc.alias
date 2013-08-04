@@ -13,6 +13,8 @@ alias zmv='noglob zmv -W'
 
 alias tmux-copy='tmux save-buffer - | pbcopy'
 
+alias e='emacsclient'
+
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
   export LESS='-R'

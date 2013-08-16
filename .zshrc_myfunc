@@ -23,3 +23,15 @@ function server(){
 function zman() {
   PAGER="less -g -s '+/^       "$1"'" man zshall
 }
+
+# Emacs の現在のバッファに対応するディレクトリに cd する
+# cf: http://d.hatena.ne.jp/syohex/20111026/1319606395
+function cde () {
+  EMACS_CWD=`emacsclient -e "
+      (if (featurep 'elscreen)
+          (elscreen-current-directory)
+        (non-elscreen-current-directory))" | sed 's/^"\(.*\)"$/\1/'`
+
+  echo "chdir to $EMACS_CWD"
+  cd "$EMACS_CWD"
+}

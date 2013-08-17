@@ -63,6 +63,10 @@ zstyle ':completion:*:manuals' separate-sections true
 # オブジェクトファイルとか中間ファイルとかはfileとして補完させない
 zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#'
 
+# autojump
+# https://github.com/joelthelion/autojump
+[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
+
 # load .zshrc_*
 [ -f $ZDOTDIR/.zshrc_`uname` ]  && source $ZDOTDIR/.zshrc_`uname`
 [ -f $ZDOTDIR/.zshrc_path    ]  && source $ZDOTDIR/.zshrc_path

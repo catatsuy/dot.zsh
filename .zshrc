@@ -69,6 +69,7 @@ zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#'
 
 # load .zshrc_*
 [ -f $ZDOTDIR/.zshrc_`uname` ]  && source $ZDOTDIR/.zshrc_`uname`
+[ -f $ZDOTDIR/.zshrc_colors  ]  && source $ZDOTDIR/.zshrc_colors
 [ -f $ZDOTDIR/.zshrc_path    ]  && source $ZDOTDIR/.zshrc_path
 [ -f $ZDOTDIR/.zshrc_alias   ]  && source $ZDOTDIR/.zshrc_alias
 [ -f $ZDOTDIR/.zshrc_myfunc  ]  && source $ZDOTDIR/.zshrc_myfunc

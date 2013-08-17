@@ -1,0 +1,4 @@
+if [[ -f ~/.dircolors && -x `which dircolors` ]]; then
+  eval `dircolors ~/.dircolors`
+  zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+fi

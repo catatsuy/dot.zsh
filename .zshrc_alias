@@ -8,6 +8,8 @@ alias l='ls -CF'
 
 alias time='/usr/bin/time -p'
 
+alias history='history -i'
+
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 

@@ -18,6 +18,7 @@ setopt complete_aliases
 setopt list_packed
 setopt nolistbeep
 setopt transient_rprompt
+setopt hist_no_store
 
 bindkey -e
 

@@ -67,6 +67,12 @@ zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#'
 # https://github.com/joelthelion/autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
 
+# zsh-syntax-highlighting
+# https://github.com/zsh-users/zsh-syntax-highlighting
+if [ -d $ZDOTDIR/zsh-syntax-highlighting ]; then
+  source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
 # load .zshrc_*
 [ -f $ZDOTDIR/.zshrc_`uname` ]  && source $ZDOTDIR/.zshrc_`uname`
 [ -f $ZDOTDIR/.zshrc_colors  ]  && source $ZDOTDIR/.zshrc_colors

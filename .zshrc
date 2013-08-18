@@ -63,20 +63,9 @@ zstyle ':completion:*:manuals' separate-sections true
 # オブジェクトファイルとか中間ファイルとかはfileとして補完させない
 zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#'
 
-# autojump
-# https://github.com/joelthelion/autojump
-[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
-
-# zsh-syntax-highlighting
-# https://github.com/zsh-users/zsh-syntax-highlighting
-if [ -d $ZDOTDIR/zsh-syntax-highlighting ]; then
-  source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
 # load .zshrc_*
-[ -f $ZDOTDIR/.zshrc_`uname` ]  && source $ZDOTDIR/.zshrc_`uname`
-[ -f $ZDOTDIR/.zshrc_colors  ]  && source $ZDOTDIR/.zshrc_colors
-[ -f $ZDOTDIR/.zshrc_path    ]  && source $ZDOTDIR/.zshrc_path
-[ -f $ZDOTDIR/.zshrc_alias   ]  && source $ZDOTDIR/.zshrc_alias
-[ -f $ZDOTDIR/.zshrc_myfunc  ]  && source $ZDOTDIR/.zshrc_myfunc
-[ -f $ZDOTDIR/.zshrc_local   ]  && source $ZDOTDIR/.zshrc_local
+[ -f $ZDOTDIR/.zshrc_`uname`  ] && . $ZDOTDIR/.zshrc_`uname`
+[ -f $ZDOTDIR/.zshrc_external ] && . $ZDOTDIR/.zshrc_external
+[ -f $ZDOTDIR/.zshrc_alias    ] && . $ZDOTDIR/.zshrc_alias
+[ -f $ZDOTDIR/.zshrc_myfunc   ] && . $ZDOTDIR/.zshrc_myfunc
+[ -f $ZDOTDIR/.zshrc_local    ] && . $ZDOTDIR/.zshrc_local

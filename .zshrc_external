@@ -1,0 +1,36 @@
+# autojump
+# https://github.com/joelthelion/autojump
+if [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]]; then
+  . ~/.autojump/etc/profile.d/autojump.zsh
+fi
+
+# zsh-syntax-highlighting
+# https://github.com/zsh-users/zsh-syntax-highlighting
+if [ -f $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  . $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# dircolors
+if [[ -f ~/.dircolors && -x `which dircolors` ]]; then
+  eval `dircolors ~/.dircolors`
+  zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+fi
+
+# rbenv
+if [ -d ${HOME}/.rbenv ]; then
+  export PATH=$HOME/.rbenv/bin:$PATH
+  eval "$(rbenv init -)"
+  . ~/.rbenv/completions/rbenv.zsh
+fi
+
+# plenv
+if [ -d ${HOME}/.plenv ]; then
+  export PATH=$HOME/.plenv/bin:$PATH
+  eval "$(plenv init -)"
+  . ~/.plenv/completions/plenv.zsh
+fi
+
+# perlbrew
+# if [ -f ${HOME}/perl5/perlbrew/etc/bashrc ]; then
+#   . ~/perl5/perlbrew/etc/bashrc
+# fi

@@ -1,11 +1,9 @@
 # TeX -> PDF 一発変換
-function textopdf(){
+function textopdf() {
   file=$1
-  if platex $file
-  then
+  if platex $file; then
     echo "\n--platex exit--\n"
-    if dvipdfmx ${file%tex}dvi
-    then
+    if dvipdfmx ${file%tex}dvi; then
       echo "\n--dvipdfmx exit--\n"
     else
       echo "Look ${file%tex}log"
@@ -14,7 +12,7 @@ function textopdf(){
 }
 
 # カレントディレクトリをお手軽サーバに
-function server(){
+function server() {
   port=$1
   python -m SimpleHTTPServer $1
 }
@@ -26,7 +24,7 @@ function zman() {
 
 # Emacs の現在のバッファに対応するディレクトリに cd する
 # cf: http://d.hatena.ne.jp/syohex/20111026/1319606395
-function cde () {
+function cde() {
   EMACS_CWD=`emacsclient -e "
       (if (featurep 'elscreen)
           (elscreen-current-directory)

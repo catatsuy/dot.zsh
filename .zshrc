@@ -2,7 +2,7 @@
 fpath=($ZDOTDIR/functions/completions/src(N-/) ${fpath})
 
 autoload -Uz compinit
-compinit
+compinit -u
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000

@@ -10,6 +10,16 @@ if [ -f $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   . $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+# zsh-history-substring-search
+# https://github.com/zsh-users/zsh-history-substring-search
+if [ -d $ZDOTDIR/zsh-history-substring-search ]; then
+  . $ZDOTDIR/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+  # bind P and N for EMACS mode
+  bindkey -M emacs '^P' history-substring-search-up
+  bindkey -M emacs '^N' history-substring-search-down
+fi
+
 # dircolors
 if [[ -f ~/.dircolors && -x `which dircolors` ]]; then
   eval `dircolors ~/.dircolors`

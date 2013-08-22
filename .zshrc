@@ -19,6 +19,9 @@ setopt list_packed
 setopt nolistbeep
 setopt transient_rprompt
 setopt hist_no_store
+select auto_menu
+setopt extended_glob
+setopt notify
 
 bindkey -e
 
@@ -41,6 +44,9 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
+# Shift-Tabで補完候補を逆順する（"\e[Z"でも動作する）
+bindkey "^[[Z" reverse-menu-complete
+
 # 補完関数の表示を強化する
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
@@ -52,6 +58,9 @@ zstyle ':completion:*:descriptions' format '%F{yellow}Completing %B%d%b%f'$DEFAU
 
 # マッチ種別を別々に表示
 zstyle ':completion:*' group-name ''
+
+# 補完候補をハイライトする
+zstyle ':completion:*:default' menu select=2
 
 # セパレータを設定する
 zstyle ':completion:*' list-separator '-->'

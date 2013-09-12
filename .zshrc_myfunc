@@ -33,3 +33,12 @@ function cde() {
   echo "chdir to $EMACS_CWD"
   cd "$EMACS_CWD"
 }
+
+# tmuxの環境変数をリフレッシュする
+# もっといい策を考えたい！
+function tmux-session-refresh() {
+  if [ -n "$TMUX" ]; then
+    unset $(tmux show-env | sed -n 's/^-//p')
+    eval export $(tmux show-env | sed -n 's/$/"/; s/=/="/p')
+  fi
+}

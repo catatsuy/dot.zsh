@@ -26,7 +26,6 @@ setopt notify
 bindkey -e
 
 PROMPT="%n@%m%% "
-RPROMPT="[%~]"
 
 ## 重複パスを登録しない
 typeset -U path cdpath fpath manpath
@@ -76,5 +75,6 @@ zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#'
 [ -f $ZDOTDIR/.zshrc_`uname`  ] && . $ZDOTDIR/.zshrc_`uname`
 [ -f $ZDOTDIR/.zshrc_external ] && . $ZDOTDIR/.zshrc_external
 [ -f $ZDOTDIR/.zshrc_alias    ] && . $ZDOTDIR/.zshrc_alias
+[ -f $ZDOTDIR/.zshrc_git      ] && . $ZDOTDIR/.zshrc_git
 [ -f $ZDOTDIR/.zshrc_myfunc   ] && . $ZDOTDIR/.zshrc_myfunc
 [ -f $ZDOTDIR/.zshrc_local    ] && . $ZDOTDIR/.zshrc_local

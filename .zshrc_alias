@@ -22,7 +22,9 @@ alias e='emacsclient'
 
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
-  export LESS='-R'
 else
   alias diff='diff -u'
 fi
+
+# 色表示に対応・パーセンテージ表示
+export LESS='-MR'

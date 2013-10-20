@@ -19,7 +19,7 @@ setopt list_packed
 setopt nolistbeep
 setopt transient_rprompt
 setopt hist_no_store
-select auto_menu
+setopt auto_menu
 setopt extended_glob
 setopt notify
 

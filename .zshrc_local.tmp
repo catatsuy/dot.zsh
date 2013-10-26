@@ -7,3 +7,6 @@
 
 # haskell
 # export PATH=$HOME/.cabal/bin:$PATH
+
+# node
+# export PATH=$HOME/.node/bin:$PATH

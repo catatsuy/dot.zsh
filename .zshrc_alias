@@ -14,7 +14,6 @@ autoload -Uz zmv
 alias zmv='noglob zmv -W'
 
 # tmux
-alias tmux-copy='tmux save-buffer - | pbcopy'
 alias tmux-changekey='tmux set-option -g prefix C-q'
 alias tmux-revertkey='tmux set-option -g prefix C-z'
 

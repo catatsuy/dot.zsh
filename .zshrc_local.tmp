@@ -14,3 +14,7 @@
 # go cf: http://golang.org/doc/code.html#GOPATH
 # export GOPATH=$HOME/go
 # export PATH=$PATH:$GOPATH/bin
+
+# scala
+# export SCALA_HOME=/usr/local/share/scala
+# export PATH=$PATH:$SCALA_HOME/bin

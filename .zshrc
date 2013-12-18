@@ -22,6 +22,7 @@ setopt hist_no_store
 setopt auto_menu
 setopt extended_glob
 setopt notify
+setopt nonomatch
 
 bindkey -e
 

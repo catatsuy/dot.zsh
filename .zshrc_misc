@@ -1,5 +1,30 @@
+# git svn で情報表示
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+
+precmd () {
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+
+RPROMPT="%1(v|%F{green}%1v%f|)[%~]"
+
+# tramp-mode
+# cf: http://www.emacswiki.org/emacs/TrampMode
+if [[ "$TERM" == "dumb" ]]; then
+  unsetopt zle
+  unsetopt prompt_cr
+  unsetopt prompt_subst
+  unfunction precmd
+  unfunction preexec
+  PS1='$ '
+fi
+
 # TeX -> PDF 一発変換
-function textopdf() {
+function textopdf () {
   file=$1
   if platex $file; then
     echo "\n--platex exit--\n"
@@ -12,19 +37,19 @@ function textopdf() {
 }
 
 # カレントディレクトリをお手軽サーバに
-function server() {
+function server () {
   port=$1
   python -m SimpleHTTPServer $1
 }
 
 # zsh の man を表示
-function zman() {
+function zman () {
   PAGER="less -g -s '+/^       "$1"'" man zshall
 }
 
 # Emacs の現在のバッファに対応するディレクトリに cd する
 # cf: http://d.hatena.ne.jp/syohex/20111026/1319606395
-function cde() {
+function cde () {
   EMACS_CWD=`emacsclient -e "
       (if (featurep 'elscreen)
           (elscreen-current-directory)
@@ -36,7 +61,7 @@ function cde() {
 
 # tmuxの環境変数をリフレッシュする
 # もっといい策を考えたい！
-function tmux-session-refresh() {
+function tmux-session-refresh () {
   if [ -n "$TMUX" ]; then
     unset $(tmux show-env | sed -n 's/^-//p')
     eval export $(tmux show-env | sed -n 's/$/"/; s/=/="/p')

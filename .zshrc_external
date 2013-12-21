@@ -33,8 +33,3 @@ if [ -d ${HOME}/.plenv ]; then
   eval "$(plenv init -)"
   . ~/.plenv/completions/plenv.zsh
 fi
-
-# perlbrew
-# if [ -f ${HOME}/perl5/perlbrew/etc/bashrc ]; then
-#   . ~/perl5/perlbrew/etc/bashrc
-# fi

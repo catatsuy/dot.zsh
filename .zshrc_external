@@ -1,9 +1,3 @@
-# autojump
-# https://github.com/joelthelion/autojump
-if [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]]; then
-  . ~/.autojump/etc/profile.d/autojump.zsh
-fi
-
 # zsh-syntax-highlighting
 # https://github.com/zsh-users/zsh-syntax-highlighting
 if [ -f $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then

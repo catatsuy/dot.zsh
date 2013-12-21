@@ -79,3 +79,7 @@ _be () {
   fi
 }
 compdef _be be
+
+bein () {
+  bundle install --path=vendor/bundler --binstubs=vendor/bin
+}

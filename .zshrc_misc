@@ -105,6 +105,6 @@ _be () {
 }
 compdef _be be
 
-buin () {
-  bundle install --path=vendor/bundler --binstubs=vendor/bin
+bunin () {
+  bundle install --path=vendor/bundle --binstubs=vendor/bin
 }

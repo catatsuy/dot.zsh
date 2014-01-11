@@ -13,10 +13,6 @@ alias history='history -i'
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 
-# tmux
-alias tmux-changekey='tmux set-option -g prefix C-q'
-alias tmux-revertkey='tmux set-option -g prefix C-z'
-
 alias e='emacsclient'
 
 if [[ -x `which colordiff` ]]; then

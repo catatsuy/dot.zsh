@@ -7,3 +7,6 @@
 [submodule "zsh-history-substring-search"]
 	path = zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search
+[submodule "functions/docker-zsh-completion"]
+	path = functions/docker-zsh-completion
+	url = https://github.com/felixr/docker-zsh-completion.git

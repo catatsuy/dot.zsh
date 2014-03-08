@@ -10,3 +10,6 @@
 [submodule "functions/docker-zsh-completion"]
 	path = functions/docker-zsh-completion
 	url = https://github.com/felixr/docker-zsh-completion.git
+[submodule "functions/padrino-zsh-completion"]
+	path = functions/padrino-zsh-completion
+	url = https://github.com/matthias-guenther/padrino-zsh-completion.git

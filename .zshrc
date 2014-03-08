@@ -1,5 +1,5 @@
 ## 補完関数を増やす
-fpath=($ZDOTDIR/functions/completions/src(N-/) $ZDOTDIR/functions/docker-zsh-completion(N-/) ${fpath})
+fpath=($ZDOTDIR/functions/completions/src(N-/) $ZDOTDIR/functions/docker-zsh-completion(N-/) $ZDOTDIR/functions/padrino-zsh-completion(N-/) ${fpath})
 
 autoload -Uz compinit
 compinit -u

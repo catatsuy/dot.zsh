@@ -19,4 +19,5 @@ fi
 if [ -n "$TMUX" ]; then
   alias pbcopy="reattach-to-user-namespace pbcopy"
   alias pbpaste="reattach-to-user-namespace pbpaste"
+  alias launchctl="reattach-to-user-namespace launchctl"
 fi

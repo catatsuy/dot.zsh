@@ -33,3 +33,13 @@ if [ -d ${HOME}/.plenv ]; then
   eval "$(plenv init -)"
   . ~/.plenv/completions/plenv.zsh
 fi
+
+# nvm
+if [ -s ${HOME}/.nvm/nvm.sh ]; then
+  . ${HOME}/.nvm/nvm.sh
+fi
+
+# npm
+if [[ -x `which npm` ]]; then
+  eval "$(npm completion)"
+fi

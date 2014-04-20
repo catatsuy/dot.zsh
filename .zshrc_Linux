@@ -4,8 +4,13 @@ alias ls='ls --color=auto'
 alias open='gnome-open'
 
 # clipboard
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+if [[ -x `which xclip` ]]; then
+  alias pbcopy='xclip -selection clipboard -in'
+  alias pbpaste='xclip -selection clipboard -out'
+elif [[ -x `which xsel` ]]; then
+  alias pbcopy='xsel --clipboard --input'
+  alias pbpaste='xsel --clipboard --output'
+fi
 
 # zsh_command_not_found
 if [ -f /etc/zsh_command_not_found ]; then

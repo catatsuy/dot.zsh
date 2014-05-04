@@ -15,7 +15,7 @@ if [ -d $ZDOTDIR/zsh-history-substring-search ]; then
 fi
 
 # dircolors
-if [[ -f ~/.dircolors && -x `which dircolors` ]]; then
+if [[ -f ${HOME}/.dircolors && -x `which dircolors` ]]; then
   eval `dircolors ~/.dircolors`
   zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 fi
@@ -24,7 +24,7 @@ fi
 if [ -d ${HOME}/.rbenv ]; then
   export PATH=$HOME/.rbenv/bin:$PATH
   eval "$(rbenv init -)"
-  . ~/.rbenv/completions/rbenv.zsh
+  . ${HOME}/.rbenv/completions/rbenv.zsh
   export BUNDLER_EDITOR='emacsclient'
 fi
 
@@ -32,7 +32,7 @@ fi
 if [ -d ${HOME}/.plenv ]; then
   export PATH=$HOME/.plenv/bin:$PATH
   eval "$(plenv init -)"
-  . ~/.plenv/completions/plenv.zsh
+  . ${HOME}/.plenv/completions/plenv.zsh
 fi
 
 # nvm

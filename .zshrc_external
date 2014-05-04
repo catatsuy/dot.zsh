@@ -35,6 +35,11 @@ if [ -d ${HOME}/.plenv ]; then
   . ${HOME}/.plenv/completions/plenv.zsh
 fi
 
+# phpbrew
+if [ -f ${HOME}/.phpbrew/bashrc ]; then
+  . ${HOME}/.phpbrew/bashrc
+fi
+
 # nvm
 if [ -s ${HOME}/.nvm/nvm.sh ]; then
   . ${HOME}/.nvm/nvm.sh

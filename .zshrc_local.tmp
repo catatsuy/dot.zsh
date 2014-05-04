@@ -13,8 +13,5 @@
 # export SCALA_HOME=/usr/local/share/scala
 # export PATH=$PATH:$SCALA_HOME/bin
 
-# phpbrew
-# source ~/.phpbrew/bashrc
-
 # local binary
 # export PATH=$HOME/local/bin:$PATH

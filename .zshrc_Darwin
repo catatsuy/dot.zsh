@@ -21,3 +21,7 @@ if [ -n "$TMUX" ]; then
   alias pbpaste="reattach-to-user-namespace pbpaste"
   alias launchctl="reattach-to-user-namespace launchctl"
 fi
+
+# cf: http://ryo511.blog.jp/archives/37312525.html
+# gcc を入れて CC を上書きするのが正攻法？
+export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future

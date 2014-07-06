@@ -6,7 +6,7 @@
 # export PATH=$HOME/.cabal/bin:$PATH
 
 # go cf: http://golang.org/doc/code.html#GOPATH
-# export GOPATH=$HOME/go
+# export GOPATH=$HOME
 # export PATH=$PATH:$GOPATH/bin
 
 # scala

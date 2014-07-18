@@ -49,3 +49,9 @@ fi
 if [[ -x `which npm` ]]; then
   eval "$(npm completion)"
 fi
+
+# golang
+if [ -d /usr/local/go ]; then
+  export PATH=/usr/local/go/bin:$PATH
+  . /usr/local/go/misc/zsh/go
+fi

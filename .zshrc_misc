@@ -1,3 +1,6 @@
+# -*- mode: sh -*-
+# vi: set ft=sh :
+
 # git svn で情報表示
 autoload -Uz vcs_info
 

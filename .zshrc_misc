@@ -17,17 +17,6 @@ RPROMPT="%1(v|%F{green}%1v%f|)[%~]"
 zstyle ':completion::*:cap:*:commands' command 'bundle exec cap -T'
 zstyle ':completion::*:rake:*:targets' command 'bundle exec rake -sT $opt_args[(I)(-N|--nosearch)] ${(kv)opt_args[(I)(-f|--rakefile)]}'
 
-# tramp-mode
-# cf: http://www.emacswiki.org/emacs/TrampMode
-if [[ "$TERM" == "dumb" ]]; then
-  unsetopt zle
-  unsetopt prompt_cr
-  unsetopt prompt_subst
-  unfunction precmd
-  unfunction preexec
-  PS1='$ '
-fi
-
 function peco-src () {
   local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
@@ -39,42 +28,10 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 
-# cf: http://shibayu36.hatenablog.com/entry/2014/07/26/151106
-function peco-git-recent-branches () {
-  local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | \
-    perl -pne 's{^refs/heads/}{}' | \
-    peco)
-  if [ -n "$selected_branch" ]; then
-    BUFFER="git checkout ${selected_branch}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-git-recent-branches
-
-function peco-git-recent-all-branches () {
-  local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads refs/remotes | \
-    perl -pne 's{^refs/(heads|remotes)/}{}' | \
-    peco)
-  if [ -n "$selected_branch" ]; then
-    BUFFER="git checkout -t ${selected_branch}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-git-recent-all-branches
-bindkey '^v^b' peco-git-recent-branches
-bindkey '^vb' peco-git-recent-all-branches
-
 # カレントディレクトリをお手軽サーバに
 function server () {
   port=$1
   python -m SimpleHTTPServer $1
-}
-
-# zsh の man を表示
-function zman () {
-  PAGER="less -g -s '+/^       "$1"'" man zshall
 }
 
 # Emacs の現在のバッファに対応するディレクトリに cd する

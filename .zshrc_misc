@@ -12,6 +12,11 @@ precmd () {
 
 RPROMPT="%1(v|%F{green}%1v%f|)[%~]"
 
+# cap/rake の補完
+# cf: http://qiita.com/mollifier/items/39e6b2151e7f4e5007e8
+zstyle ':completion::*:cap:*:commands' command 'bundle exec cap -T'
+zstyle ':completion::*:rake:*:targets' command 'bundle exec rake -sT $opt_args[(I)(-N|--nosearch)] ${(kv)opt_args[(I)(-f|--rakefile)]}'
+
 # tramp-mode
 # cf: http://www.emacswiki.org/emacs/TrampMode
 if [[ "$TERM" == "dumb" ]]; then

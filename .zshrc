@@ -63,7 +63,6 @@ zstyle ':completion:*:default' menu select=2
 
 # セパレータを設定する
 zstyle ':completion:*' list-separator '-->'
-zstyle ':completion:*:manuals' separate-sections true
 
 # manの補完をセクション番号別に表示させる
 zstyle ':completion:*:manuals' separate-sections true

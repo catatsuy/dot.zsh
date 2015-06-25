@@ -8,21 +8,27 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-setopt hist_ignore_dups
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt share_history
+setopt auto_menu
 setopt auto_pushd
-setopt pushd_ignore_dups
 setopt complete_aliases
+setopt extended_glob
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_no_store
+setopt hist_save_no_dups
 setopt list_packed
 setopt nolistbeep
-setopt transient_rprompt
-setopt hist_no_store
-setopt auto_menu
-setopt extended_glob
-setopt notify
 setopt nonomatch
+setopt notify
+setopt pushd_ignore_dups
+setopt share_history
+setopt transient_rprompt
+
+# バックグラウンドジョブも等しい優先度で実行
+# バックグラウンドジョブを実行し続ける
+# http://www.kyogoku.biz/docs/Shell/Zsh/customize
+unsetopt bg_nice
+unsetopt hup
 
 bindkey -e
 

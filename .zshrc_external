@@ -56,5 +56,5 @@ fi
 # golang
 if [ -d /usr/local/go ]; then
   export PATH=/usr/local/go/bin:$PATH
-  . /usr/local/go/misc/zsh/go
+  . $ZDOTDIR/functions/misc-completion/go
 fi

@@ -18,6 +18,11 @@ else
   alias ls='ls -G'
 fi
 
+# gtarがあればtarにする
+if type gtar > /dev/null 2>&1; then
+  alias tar="gtar"
+fi
+
 ## tmux 内で
 if [ -n "$TMUX" ]; then
   alias pbcopy="reattach-to-user-namespace pbcopy"

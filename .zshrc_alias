@@ -9,6 +9,8 @@ alias ll='ls -lh'
 alias la='ll -A'
 alias l='ls -CF'
 
+alias cp='cp -a'
+
 alias time='/usr/bin/time -p'
 
 alias history='history -i'

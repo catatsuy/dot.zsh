@@ -26,7 +26,7 @@ fi
 # rbenv
 if [ -d ${HOME}/.rbenv ]; then
   export PATH=$HOME/.rbenv/bin:$PATH
-  eval "$(rbenv init -)"
+  eval "$(rbenv init - --no-rehash)"
   . ${HOME}/.rbenv/completions/rbenv.zsh
   export BUNDLER_EDITOR='emacsclient'
 fi
@@ -34,7 +34,7 @@ fi
 # plenv
 if [ -d ${HOME}/.plenv ]; then
   export PATH=$HOME/.plenv/bin:$PATH
-  eval "$(plenv init -)"
+  eval "$(plenv init - --no-rehash)"
   . ${HOME}/.plenv/completions/plenv.zsh
 fi
 

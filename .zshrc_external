@@ -43,9 +43,11 @@ if [ -f ${HOME}/.phpbrew/bashrc ]; then
   . ${HOME}/.phpbrew/bashrc
 fi
 
-# nvm
-if [ -s ${HOME}/.nvm/nvm.sh ]; then
-  . ${HOME}/.nvm/nvm.sh
+# nodenv
+if [ -d ${HOME}/.nodenv ]; then
+  export PATH=$HOME/.nodenv/bin:$PATH
+  eval "$(nodenv init - --no-rehash)"
+  . ${HOME}/.nodenv/completions/nodenv.zsh
 fi
 
 # npm

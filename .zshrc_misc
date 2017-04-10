@@ -15,6 +15,15 @@ precmd () {
 
 RPROMPT="%1(v|%F{green}%1v%f|)[%~]"
 
+# -------------------------------------
+# @see https://hoelz.ro/blog/making-ssh_auth_sock-work-between-detaches-in-tmux
+# -------------------------------------
+if [ ! -z "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$HOME/.ssh/agent_sock" ] ; then
+  unlink "$HOME/.ssh/agent_sock" 2>/dev/null
+  ln -s "$SSH_AUTH_SOCK" "$HOME/.ssh/agent_sock"
+  export SSH_AUTH_SOCK="$HOME/.ssh/agent_sock"
+fi
+
 # cap/rake の補完
 # cf: http://qiita.com/mollifier/items/39e6b2151e7f4e5007e8
 zstyle ':completion::*:cap:*:commands' command 'bundle exec cap -T'

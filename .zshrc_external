@@ -58,5 +58,4 @@ fi
 # golang
 if [ -d /usr/local/go ]; then
   export PATH=/usr/local/go/bin:$PATH
-  . $ZDOTDIR/functions/go
 fi

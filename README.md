@@ -1,7 +1,7 @@
 .zsh
 ==================================
 
-    git clone --recursive git://github.com/catatsuy/dot.zsh.git ~/.zsh
+    git clone --recursive https://github.com/catatsuy/dot.zsh.git ~/.zsh
 
 `.zsh.local` は自由にいじれる
 

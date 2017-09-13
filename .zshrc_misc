@@ -18,7 +18,7 @@ RPROMPT="%1(v|%F{green}%1v%f|)[%~]"
 # -------------------------------------
 # @see https://hoelz.ro/blog/making-ssh_auth_sock-work-between-detaches-in-tmux
 # -------------------------------------
-if [ ! -z "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$HOME/.ssh/agent_sock" ] ; then
+if [ ! -z "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$HOME/.ssh/agent_sock" -a -d ${HOME}/.ssh ]; then
   unlink "$HOME/.ssh/agent_sock" 2>/dev/null
   ln -s "$SSH_AUTH_SOCK" "$HOME/.ssh/agent_sock"
   export SSH_AUTH_SOCK="$HOME/.ssh/agent_sock"

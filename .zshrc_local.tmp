@@ -9,10 +9,11 @@
 # export PATH=$HOME/.cabal/bin:$PATH
 
 # go cf: http://golang.org/doc/code.html#GOPATH
-# export GOPATH=$HOME
+# export GOPATH=$HOME/go
 # export PATH=$PATH:$GOPATH/bin
-# export PATH=/usr/local/go/bin:$PATH
 
+# ghq
+# export GHQ_ROOT=$GOPATH
 
 # scala
 # export SCALA_HOME=/usr/local/share/scala

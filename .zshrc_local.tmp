@@ -13,7 +13,7 @@
 # export PATH=$PATH:$GOPATH/bin
 
 # ghq
-# export GHQ_ROOT=$GOPATH
+# export GHQ_ROOT=$HOME/go/src
 
 # scala
 # export SCALA_HOME=/usr/local/share/scala

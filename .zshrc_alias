@@ -23,7 +23,7 @@ alias e='emacsclient'
 alias df='df -kh'
 alias du='du -kh'
 
-if [[ -x `which colordiff` ]]; then
+if [ -x "`which colordiff 2>/dev/null`" ]; then
   alias diff='colordiff -u'
 else
   alias diff='diff -u'

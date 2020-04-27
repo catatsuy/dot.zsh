@@ -50,6 +50,13 @@ if [ -d ${HOME}/.nodenv ]; then
   . ${HOME}/.nodenv/completions/nodenv.zsh
 fi
 
+# anyenv
+if [ -d ${HOME}/.anyenv ]; then
+  export ANYENV_ROOT=$HOME/.anyenv
+  export PATH=$PATH:$HOME/.anyenv/bin
+  eval "$(anyenv init -)"
+fi
+
 # npm
 if type npm > /dev/null 2>&1; then
   eval "$(npm completion)"

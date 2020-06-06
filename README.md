@@ -3,7 +3,7 @@
 
     git clone --recursive https://github.com/catatsuy/dot.zsh.git ~/.zsh
 
-`.zsh.local` は自由にいじれる
+`.zsh_local` は自由にいじれる
 
 `~/.zshenv` に
 

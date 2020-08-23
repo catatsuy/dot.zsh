@@ -34,7 +34,8 @@ bindkey '^]' peco-src
 # カレントディレクトリをお手軽サーバに
 function server () {
   port=$1
-  python -m SimpleHTTPServer $1
+  python -m SimpleHTTPServer $port
+  # python -m http.server $port
 }
 
 # tmuxの環境変数をリフレッシュする

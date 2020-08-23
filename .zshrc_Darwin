@@ -18,6 +18,10 @@ else
   alias ls='ls -G'
 fi
 
+if [ -d /usr/local/opt/curl-openssl/bin ]; then
+  export PATH=/usr/local/opt/curl-openssl/bin:$PATH
+fi
+
 # gtarがあればtarにする
 if type gtar > /dev/null 2>&1; then
   alias tar="gtar"

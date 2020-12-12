@@ -6,12 +6,16 @@ alias javac="javac -J-Dfile.encoding=UTF-8"
 alias java="java -Dfile.encoding=UTF-8"
 
 ## pathを設定
-path=(/usr/local/sbin(N-/) /usr/local/bin(N-/) /usr/bin(N-/) /bin(N-/) /usr/sbin(N-/) /sbin(N-/) /opt/X11/bin(N-/))
+path=(/usr/local/sbin(N-/) /usr/local/bin(N-/) /opt/homebrew/bin(N-/) /usr/bin(N-/) /bin(N-/) /usr/sbin(N-/) /sbin(N-/) /opt/X11/bin(N-/))
 
 ## coreutils
 if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
   export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
   export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+  alias ls='ls --color=auto'
+elif [ -d /opt/homebrew/opt/coreutils/libexec/gnubin ]; then
+  export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
+  export MANPATH=/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH
   alias ls='ls --color=auto'
 else
   export LSCOLORS=gxfxcxdxbxegedabagacad
@@ -20,11 +24,14 @@ fi
 
 if [ -d /usr/local/opt/curl-openssl/bin ]; then
   export PATH=/usr/local/opt/curl-openssl/bin:$PATH
+elif [ -d /opt/homebrew/opt/curl/bin ]; then
+  export PATH=/opt/homebrew/opt/curl/bin:$PATH
 fi
 
-# gtarがあればtarにする
-if type gtar > /dev/null 2>&1; then
-  alias tar="gtar"
+if [ -d /usr/local/opt/gnu-tar/libexec/gnubin ]; then
+  export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
+elif [ -d /opt/homebrew/opt/gnu-tar/libexec/gnubin ]; then
+  export PATH=/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH
 fi
 
 ## tmux 内で

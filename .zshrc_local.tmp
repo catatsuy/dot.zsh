@@ -1,13 +1,6 @@
 # -*- mode: sh -*-
 # vi: set ft=sh :
 
-# LaTeX
-# export PATH=/usr/local/texlive/2011/bin/i386-linux:$PATH
-# export PATH=/usr/local/texlive/2012/bin/x86_64-darwin:$PATH
-
-# haskell
-# export PATH=$HOME/.cabal/bin:$PATH
-
 # go cf: http://golang.org/doc/code.html#GOPATH
 # export GOPATH=$HOME/go
 # export PATH=$PATH:$GOPATH/bin

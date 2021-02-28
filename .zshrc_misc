@@ -3,6 +3,7 @@
 
 # git svn で情報表示
 autoload -Uz vcs_info
+setopt prompt_subst
 
 zstyle ':vcs_info:*' formats '[%b]'
 zstyle ':vcs_info:*' actionformats '[%b|%a]'

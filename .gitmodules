@@ -1,9 +1,9 @@
 [submodule "functions/completions"]
 	path = functions/completions
-	url = git://github.com/zsh-users/zsh-completions.git
+	url = https://github.com/zsh-users/zsh-completions
 [submodule "zsh-syntax-highlighting"]
 	path = zsh-syntax-highlighting
-	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "zsh-history-substring-search"]
 	path = zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search

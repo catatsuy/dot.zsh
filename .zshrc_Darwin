@@ -34,6 +34,10 @@ elif [ -d /opt/homebrew/opt/gnu-tar/libexec/gnubin ]; then
   export PATH=/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH
 fi
 
+if [ -d /opt/homebrew/opt/libressl/bin/ ]; then
+  export PATH=/opt/homebrew/opt/libressl/bin:$PATH
+fi
+
 ## tmux 内で
 if [ -n "$TMUX" ]; then
   alias pbcopy="reattach-to-user-namespace pbcopy"

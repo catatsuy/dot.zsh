@@ -90,4 +90,5 @@ zstyle ':completion:*:*:kill:*' insert-ids single
 [ -f $ZDOTDIR/.zshrc_misc     ] && . $ZDOTDIR/.zshrc_misc
 [ -f $ZDOTDIR/.zshrc_local    ] && . $ZDOTDIR/.zshrc_local
 
+# refs: https://github.com/oven-sh/bun/issues/7641
 # bun completions

@@ -89,3 +89,5 @@ zstyle ':completion:*:*:kill:*' insert-ids single
 [ -f $ZDOTDIR/.zshrc_alias    ] && . $ZDOTDIR/.zshrc_alias
 [ -f $ZDOTDIR/.zshrc_misc     ] && . $ZDOTDIR/.zshrc_misc
 [ -f $ZDOTDIR/.zshrc_local    ] && . $ZDOTDIR/.zshrc_local
+
+# bun completions

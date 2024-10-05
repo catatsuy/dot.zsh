@@ -66,3 +66,10 @@ fi
 if [ -d /usr/local/go ]; then
   export PATH=/usr/local/go/bin:$PATH
 fi
+
+# bun
+if [ -d ${HOME}/.bun ]; then
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH=$HOME/.bun/bin:$PATH
+  [ -s "${HOME}/.bun/_bun" ] && . "${HOME}/.bun/_bun"
+fi

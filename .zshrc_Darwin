@@ -22,12 +22,6 @@ else
   alias ls='ls -G'
 fi
 
-if [ -d /usr/local/opt/curl-openssl/bin ]; then
-  export PATH=/usr/local/opt/curl-openssl/bin:$PATH
-elif [ -d /opt/homebrew/opt/curl/bin ]; then
-  export PATH=/opt/homebrew/opt/curl/bin:$PATH
-fi
-
 if [ -d /usr/local/opt/gnu-tar/libexec/gnubin ]; then
   export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
 elif [ -d /opt/homebrew/opt/gnu-tar/libexec/gnubin ]; then

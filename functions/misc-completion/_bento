@@ -1,0 +1,23 @@
+#compdef bento
+
+_bento() {
+  _arguments \
+    '-version[Print version information and quit]' \
+    '-help[Print help information and quit]' \
+    '-h[Print help information and quit]' \
+    '-file[Specify a target file]:file:_files' \
+    '-branch[Suggest branch name]' \
+    '-commit[Suggest commit message]' \
+    '-translate[Translate text]' \
+    '-review[Review source code]' \
+    '-dump[Dump repository contents]' \
+    '-limit[Limit the number of characters to translate]:number' \
+    '-multi[Multi mode]' \
+    '-single[Single mode (default)]' \
+    '-language[Specify the output language]:string' \
+    '-prompt[Prompt text]:string' \
+    '-system[System prompt text]:string' \
+    '-model[Use models such as gpt-4o-mini, gpt-4-turbo, and gpt-4o]:string'
+}
+
+compdef _bento bento

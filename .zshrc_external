@@ -43,18 +43,33 @@ if [ -f ${HOME}/.phpbrew/bashrc ]; then
   . ${HOME}/.phpbrew/bashrc
 fi
 
-# nodenv
-if [ -d ${HOME}/.nodenv ]; then
-  export PATH=$HOME/.nodenv/bin:$PATH
-  eval "$(nodenv init - --no-rehash)"
-  . ${HOME}/.nodenv/completions/nodenv.zsh
-fi
-
 # anyenv
 if [ -d ${HOME}/.anyenv ]; then
   export ANYENV_ROOT=$HOME/.anyenv
   export PATH=$PATH:$HOME/.anyenv/bin
   eval "$(anyenv init -)"
+fi
+
+if [ -d ${HOME}/.nvm ]; then
+  # Set NVM_DIR if not already set
+  export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+
+  # Lazy load NVM
+  nvm() {
+    unset -f nvm
+    source "${NVM_DIR}/nvm.sh"
+    nvm "$@"
+  }
+
+  # Add default Node version to PATH if it exists
+  if [ -f "${NVM_DIR}/alias/default" ]; then
+    DEFAULT_NODE_VERSION=$(cat "${NVM_DIR}/alias/default")
+    NODE_BIN_PATH="${NVM_DIR}/versions/node/v${DEFAULT_NODE_VERSION}/bin"
+    if [ -d "${NODE_BIN_PATH}" ]; then
+      export PATH="${NODE_BIN_PATH}:$PATH"
+      export NODE_PATH="${NVM_DIR}/versions/node/v${DEFAULT_NODE_VERSION}/lib/node_modules"
+    fi
+  fi
 fi
 
 # npm

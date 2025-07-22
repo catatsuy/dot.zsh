@@ -72,6 +72,11 @@ if [ -d ${HOME}/.nvm ]; then
   fi
 fi
 
+# refs: https://gist.github.com/masuidrive/f1b23194c5a903a4130589bde2c44802
+if [ -f ~/.claude/claude-sandbox.sb ]; then
+  alias claude="sandbox-exec -f ~/.claude/claude-sandbox.sb -D PWD="`pwd`" -D HOME="$HOME" claude"
+fi
+
 # npm
 if type npm > /dev/null 2>&1; then
   eval "$(npm completion)"

@@ -72,9 +72,13 @@ if [ -d ${HOME}/.nvm ]; then
   fi
 fi
 
+if [ -d ${HOME}/.local/bin ]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
 # refs: https://gist.github.com/masuidrive/f1b23194c5a903a4130589bde2c44802
 if [ -f ~/.claude/claude-sandbox.sb ]; then
-  alias claude="sandbox-exec -f ~/.claude/claude-sandbox.sb -D PWD="`pwd`" -D HOME="$HOME" claude"
+  alias claude="sandbox-exec -f ~/.claude/claude-sandbox.sb -D PWD="`pwd`" -D HOME="$HOME" claude --dangerously-skip-permissions"
 fi
 
 # npm

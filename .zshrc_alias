@@ -20,9 +20,6 @@ alias zmv='noglob zmv -W'
 
 alias e='emacsclient'
 
-alias df='df -kh'
-alias du='du -kh'
-
 if [ -x "`which colordiff 2>/dev/null`" ]; then
   alias diff='colordiff -u'
 else
